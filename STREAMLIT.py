@@ -7,7 +7,7 @@ load_dotenv()
 
 nvidia_api_key = os.getenv("NVIDIA_API_KEY")
 
-st.title("Maheroo")
+st.title("ChatGpt Clone")
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
@@ -33,7 +33,7 @@ def chatter(user_input):
     return completion.choices[0].message.content
 
 
-query = st.text_input("Ask a Question from Alina Baaji")
+query = st.text_input("Ask a Question")
 
 if st.button("Submit"):
     if query:
